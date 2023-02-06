@@ -4,22 +4,31 @@
     size: 50, 50 
     canvas:
         Ellipse:
+            source: "./ball.png"
             pos: self.pos
-            size: self.size          
+            size: self.size 
+                 
 
 <PongPaddle>:
     size: 15, 150
     canvas:
         Rectangle:
+            source: "./stick.png"
             pos: self.pos
             size: self.size
 
 <PongGame>:
+    
     ball: pong_ball
     player1: player_left
     player2: player_right
-    
+
     canvas:
+        Rectangle:
+            source: "./fon.png"
+            pos: self.center_x - self.width / 2, self.center_y - self.height / 2
+            size: self.width, self.height
+
         Rectangle:
             pos: self.center_x - 5, 0
             size: 10, self.height
